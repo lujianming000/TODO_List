@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>TODO_List</title>
+    <script type='text/javascript' src='https://code.jquery.com/jquery-3.5.0.min.js'></script>
+    <script type="text/javascript" src='main.js'></script>
+</head>
+<body>
+  <form>
+    <fieldset class="todo-list">
+      <p>Enter the todo item you want to modify, and the new name you want to give it.</p>
+      <input type="text" placeholder="todo to modify" id="checkValue" />
+      <input type="text" placeholder="new name" id="newValue" />
+      <br>
+      <button id="update-button">Update</button>
+      <button id="delete-button">Delete</button>
+      <legend class="todo-list__title">My Special Todo List</legend>
+      <% for(var i = 0; i < todos.length; i++) {%>
+        <label class="todo-list__label">
+          <input type="checkbox" name="" id="" />
+          <i class="check"></i>
+          <span><%= todos[i].value %></span>
+        </label>
+      <% } %>
+    </fieldset>
+  </form>
+</body>
+</html>
